@@ -1,0 +1,35 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+
+}
+/* estas propiedades definen el tamaño de la fuente de toda la paguna y agrega margenes de tipo caja */
+body{
+    font-size: 1.6rem;
+    font-family: 'Lato', 'sans-serif';
+    background-color: blueviolet;
+
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+header{
+    padding: 3rem 0;
+}
+
+header h1 {
+  text-align: center;
+  color: azure;
+  font-size: 6rem;
+}
+header p{
+    color: aliceblue;
+    text-align: center;
+    font-size: 3.2rem;
+
+}
+header p a{
+    text-decoration: none;
+    color: rgb(159, 159, 255);
+}
