@@ -17,12 +17,12 @@
 
 
 //Symbolo
-const primerSymbol = Symbol(30)
-const segundoSymbol = Symbol(30)
-console.log(primerSymbolo === segundoSymbol)
-console.log(primerSymbol.valueOf())
-console.log(segundoSymbol.valueOf())
+// const primerSymbol = Symbol(30)
+// const segundoSymbol = Symbol(30)
+// console.log(primerSymbolo === segundoSymbol)
+// console.log(primerSymbol.valueOf())
+// console.log(segundoSymbol.valueOf())
 
-const descuento =null;
-console.log(typeof descuento);
+// const descuento =null;
+// console.log(typeof descuento);
 
