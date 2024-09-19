@@ -242,8 +242,58 @@ if(numero1=== numero3)
         
         }
 
+        //NULL 
+console.warn("---Tipo de dato: NULL (nulo o vacio)");
+// El tipo de dato nulo se asigna cuando el sistema el usuario sabe de la variable pero prefiere dejarla vacia
+let  nombrUsuario = null;
+let passUsuario = null;
+let generoUsuario =null;
+let estatusRelacionSentimental =null;
+let fecha_ultimahost=null;
 
-        
+//supongamos que estamos progamando una red social, tipo facebook en la que parte de la informacion se aplicara al perfil del usuario
+//si el usurio no ha iniciado una session
+//en la UH (Historia de Usuario), que el usuario desea ingresar su  jumero telefonicoy correo electronico
+
+nombrUsuario= "Brisa230362@gmial.com"
+passUsuario="Brisa230362"
+//
+
+console.log(`El usuario ${nombrUsuario} esta intentado logearse con la contrasña ${passUsuario}`);
+//
+//
+generoUsuario ="M";
+estatusRelacionSentimental=null;
+
+console.log(`El usuario ${nombrUsuario}, se ha logeado corectamente , al tenre acceso asu informacion de si perfil podemos deducir que su genero es ${generoUsuario} y que su estado de relacionn en ${estatusRelacionSentimental} y su ultimma publicaion la realizo el ${fecha_ultimahost} `);
+
+//Comparacion de NULL vs undefined
+//si bien undefined y null tiene el mismo valor, no tienen el mismo tipo de dato
+
+console.log("comparacion de la equidad entre undefined y null");
+(fecha_ultimahost==estatusRelacionSentimental)?
+console.log("Ambas variables si tienen el mismo valor "):
+console.log("Las variables no tienen el mismo valor");
+
+console.log("comparacion de la identidad entre undefined y null")
+console.log(
+(fecha_ultimahost===estatusRelacionSentimental)?
+"ambas variables tienen el mismo valor y el mismo tipo de dato":
+"las variables tiene el mismo valor pero no el mismo tipo de dato");
+
+
+       // 8. FUNCTION (Function)
+
+console.warn("---Tipo de dato: Function (Funcion)");
+
+       // Declaramos una funcion que nos permita recibir un parametro en este caso el nombre de la persona a saludar, y le enviamos un saludo, esta function la asignamos en uns cosntante 
+
+       const saludar = function(nombre){return `Hola, ${nombre}!`} 
+// invocamos la funcion declarada
+       console.log(saludar('Brisa'));
+
+       // y el tipo de dato que tiene la constante 
+       console.log(`el tipo de dato de la constante saludar es: ${typeof(saludar)} `)
 
     
 
