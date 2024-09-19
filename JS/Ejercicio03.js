@@ -1,28 +1,42 @@
-// // String o cadenas de texto
-// const alumno = "Juan";
-// let producto = "Monitor 20 pulgadas";
+// Objetos 
 
-// const numero = "30";
-// nost numero2 =30;
-// console.log (type numero);
-// console.log(typeof numero2);
+const producto = {
+    nombre: "table 9\"",
+    marca:"Mac",
+    Modelo:"iPad",
+    costo_compra:15000.25,
+    costo_venta:16516,
+    disponible: true,
+    SKU: Symbol("Linkin Park"),
+Colores: ["Blanco","Negro","Rosa","Azul","Amarillo"]
+}
+console.warn ("-----------Objetos")
+// los objetos ya pueden representarce en formato de tabla
+console.log(producto);
+console.table(producto);
+ 
+console.warn ("Leyendo las propiedades de un objeto y sus tipos de dato")
+console.log(`Nombre del producto: ${producto.nombre} que es el tipo: ${typeof(nombre)}`)
 
-//Bignit
-// const numeroGrande = BigInt (769696969646875987);
-// console.log(typeof numeroGrande);
-
-// const numero = 10;
-// const numero2 =20;
-// console.log( numero= Number(numeroGrande));
 
 
-//Symbolo
-// const primerSymbol = Symbol(30)
-// const segundoSymbol = Symbol(30)
-// console.log(primerSymbolo === segundoSymbol)
-// console.log(primerSymbol.valueOf())
-// console.log(segundoSymbol.valueOf())
 
-// const descuento =null;
-// console.log(typeof descuento);
+// console.log(producto.nombre);
+// console.log(producto.precio);
+// console.log(producto.disponible);
 
+// // Destructuring
+// const { nombre,precio,disponible} =  producto;
+// console.log(nombre);
+// console.log(precio);
+// console.log(disponible);
+
+// // Object literal enhacenect
+// const autenticado =true;
+// const usuario = "juan";
+
+// const nuevoObjeto = {
+//     autenticado: autenticado,
+//     usuario:usuario
+// }
+// console.table(nuevoObjeto)
