@@ -6,12 +6,13 @@ practicas de repaso en JavaScript puro, con el objetivo de confirmar los conocim
 
 ## Historia de Practicas 
 
-|No.|Descripción|Estatus|
-|---|---|--|
-|1.|Metodología de Evaluacion|Activa|
-|2.|Inicialización del Proyecto de Fundamentos de JS|Actica|
-
-
+|No.|Descripción|Potenciadores|Estatus|
+|--|--|--|
+|1.|Metodo de Evaluación|1|Finalizada|
+|2.|Inicialización del Proyecto de Fundamentos de JS|5|Finalizada|
+|3.|Declaracion de variables|(Undewfined,Boolean,Number)10|Finalizada|
+|4.|Declaracion de variables|(String,Bigint,Symbol,Null,Function)Por definir|Activa|
+|5.|introduccion a Objetos||Activa|
 ### Autor
 Brisa Nallely Garcia Gregorio
 Unidad 1
