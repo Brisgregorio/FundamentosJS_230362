@@ -114,6 +114,157 @@ if(Costo_Compra< Cliente_SaldoActual)
 
 // Actualizar el valor de los Objetos
 
+// Los objetos tambien pueden representarse en formato tabala utilizando la funcion consle.table
+
+
+
+console.table(Producto)
+
+ // Accder a las propiedades de un objeto
+// console.warn("---Leyendo las propiedades de un objeto y sus tipos de dato\n"); del Producto: ${produc.Nombre) que es del tipo: $(typeof(produc.Nombre)}");
+
+// console.log(Nombre console.log("Marca: ${produc.Marca) que es del tipo $(typeof(produc.Marca)}'); 
+
+// console.log("Costo compra: ${produc.costo_compra) que es del tipo $(typeof(produc.costo_compra)}'); console.log(Costoventa: ${produc.costo_venta) que es del tipo $(typeof(produc.costo_venta)}');
+
+// console.log("Disponible: ${produc.disponi) que es del tipo ${typeof(produc.disponi)}");
+
+// console.log("SKU: ${String(produc.sku)} que es del tipo ${typeof(produc.sku)}');
+
+// console.log("Colores: $(produc.colores) que es del tipo $(typeof(produc.colores)}');
+
+// ¿Puedo cambiar no solo el valor, sino el tipo de dato de un Objeto en JavaScri 
+console.log('---------------------------------------------------------')
+
+    console.log('El objeto actualmente tiene los siguientes valores')
+    
+     let tipoDisponibilidad = typeof(Producto2.Disponibilidad)
+    
+    console.log(`El tipo de dato de la disponibilidad es: ${tipoDisponibilidad}`);
+    
+     console.log(JSON.stringify(Producto2, null, 2)); // Disponiblidad Booleano
+    
+    Producto2.Disponibilidad="Si";
+    
+     let nuevoTipoDisponibilidad = typeof(Producto2.Disponibilidad)
+    
+     console.log(Producto2);
+    
+     console.log(`El nuevo tipo de dato de la disponibilidad es: ${nuevoTipoDisponibilidad}`);
+
+
+
+
+     // Agregamos nuevas propiedades a un objeto existente
+
+
+     console.log("%c5.-Agregacion de propiedades de un objeto", style_console);
+ console.log("Objeto antes de ser modificado")
+
+ console.log(JSON.stringify(Comprador));
+// Agregando propiedades 
+ Comprador['Direccion']= "Av. 05 de mayo #15, interior 4A, Xicotepec de Jurez, Puebla, Mexico "
+ Comprador['Tipo']="Premium"
+Comprador['Estatus']="Inactivo"   
+ Comprador['TotalCompras']= 50000.00
+ console.log("objeto despues de ser modificado")
+ console.table(Comprador)
+
+// Eliminamos propiedades del objeto exitente
+console.log("%c6.-Eliminamos la propiedad de un objeto mutacion", style_console);
+console.log ("Antes de ser modificado")
+delete Pedido.TipoPago;
+console.log("Despues de ser modificado")
+
+console.table(Pedido)
+
+console.log("%c7.- Metodos para controlar la mutabvilidad de los objetos, Congelados(FREEZE))", style_console)
+// SI DESEAMOS NO PERMITIR QUE LOS OBJETOS SEAN NO MODIFICADOS NI EN ESTRUCTUR,  NI VALOR, UTILIZAREMOS EL METODO FREEZE (congelar)
+console.log('la estructura actual de nuestro objeto comprador es: ')
+console.table(Comprador)
+Object.freeze(Comprador)
+// intentamos agregar, modificar valores de sus propiedades
+Comprador.FechaUltimaCompra="05/09/2024 10:15:25"
+delete Comprador.Tipo;
+Comprador.Direccion="calle 16 de septiembre #102, col. Manantiales, huahuchinango, puebla, mexico";
+console.log('verificamos si se actualizaron los camvios')
+console.table(Comprador)
+
+
+console.log("%c7.- Metodos para controlar la mutabilidad de los objetos (SEAL))", style_console)
+
+// sin en bargo en el caso de poder modificar los valores de las propiedades del objeto por su estructura usaremos seal
+Object.seal(Pedido)
+
+Pedido['Fechapedido'] = "25,09,2024 11:25:25" 
+delete Pedido ['Cantidad']
+console.log('Verificamos que si se actualizaran los cambios')
+console.table(Pedido)
+Pedido.Cantidad=5
+console.log('verificamos si se realizaron los acambios en el objto'
+)
+console.table(Pedido)
+
+
+// Dsestructuracion de 2 o mas objetos
+console.log("%c9.- Desestructuracion de 2 o mas objetos", style_console);
+
+
+
+// siempre va declarado con el nombre que tiene en el objeto y luego el nuevo nombre
+let{Precio: productoPrecio, SKU: productoSKU, Marca: productoMarca}=Producto
+let{Correo: clienteCorreo, PaisOrigen: clientePais, SaldoActual: clienteSaldo, Tipo: clienteTipo}=Comprador
+
+
+// transformar valores cuantitativos en cualitativos
+
+if(productoPrecio>2000)
+    productoPrecio="CARO"
+else productoPrecio="Barato"
+if (clienteSaldo>0)
+    clienteSaldo="A favor"
+else if(clienteSaldo<0)
+clienteSaldo="En contra"
+else
+clienteSaldo="Sin deuda"
+
+
+
+// transformar valores cualitativos a cuantitativos
+let clienteNivel;
+if(clienteTipo="Premium")
+    clienteNivel=1
+if(clienteTipo=="Freemium")
+    clienteNivel=2
+if(clienteTipo=="No identificado")
+clienteNivel=3
+
+// transformar o clasificar al cliente por su pais de origen
+if(clientePais== "Mexico")
+ clientePais="Nacional"
+else
+clientePais="Extrangero"
+
+// ole -
+let datosClientePromociones={clienteCorreo, clientePais, clienteNivel, clienteSaldo, productoMarca, productoPrecio}
+// el nuevo objeto que creamos seria un objeto de la informacion que enviariamos al area de marketing para la difucion de productos
+
+console.log("datos del cliente y sus datos a comprar")
+console.table(datosClientePromociones)
+
+
+
+
+
+
+
+// operaciones sobre objetos 
+
+// union de objetos 
+
+console.log("%c10.- ", style_console);
+
+
 
 
 
