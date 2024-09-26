@@ -39,6 +39,7 @@ console.log(typeof Producto_SKU);
 console.log("%c2.- Objeto", style_console);
 let Producto = 
 {
+    ID:2525,
     Nombre : "Motocicletas", 
     Marca: "Yamaha",
     Modelo: "R 6", 
@@ -84,7 +85,7 @@ let Producto2 =
 
 let Comprador =
 {
-    Clave: 7854,
+    ID:4545,
     Nombre: "NALLELY",
     Apellidos: "GARCIA GREGORIO",
     Tipo: "Frecuente",
@@ -94,6 +95,7 @@ let Comprador =
 }
 
 let Pedido= {
+    ID:2424,
     Producto_Clave: 316, 
     Comprador_Clave: 3216,
     Cantidad: 2, 
@@ -219,8 +221,11 @@ let{Correo: clienteCorreo, PaisOrigen: clientePais, SaldoActual: clienteSaldo, T
 // transformar valores cuantitativos en cualitativos
 
 if(productoPrecio>2000)
+
     productoPrecio="CARO"
+
 else productoPrecio="Barato"
+
 if (clienteSaldo>0)
     clienteSaldo="A favor"
 else if(clienteSaldo<0)
@@ -232,11 +237,17 @@ clienteSaldo="Sin deuda"
 
 // transformar valores cualitativos a cuantitativos
 let clienteNivel;
+
 if(clienteTipo="Premium")
+
     clienteNivel=1
+
 if(clienteTipo=="Freemium")
+
     clienteNivel=2
+
 if(clienteTipo=="No identificado")
+
 clienteNivel=3
 
 // transformar o clasificar al cliente por su pais de origen
@@ -252,9 +263,16 @@ let datosClientePromociones={clienteCorreo, clientePais, clienteNivel, clienteSa
 console.log("datos del cliente y sus datos a comprar")
 console.table(datosClientePromociones)
 
-
-
-
+// let spotyUser=
+// {
+//     Name:"", //conjelado
+//     nickiname:"", // sellado
+//     email:"", // sellodo
+//     password:"",// sellado
+//     rol:"",
+//     since:"",
+//     playList:["Las doñeras","Carnita asada","Prreo brasileiro"]
+// }
 
 
 
@@ -262,7 +280,57 @@ console.table(datosClientePromociones)
 
 // union de objetos 
 
-console.log("%c10.- ", style_console);
+console.log("%c10.-union de objetos usando el metodo de asignacion (ASSING)", style_console);
+console.log("imprimimos la estructura y valores del objeto PRODUCTO")
+console.table(Producto);
+console.log("imprimimos la estructura y valores de objeto pedido")
+console.table(Pedido)
+// suponiendo que el usurio ya realiso el pago del pedido se combertira en uina venta que reqiereinformacion de ambos objetos
+// Importante: ASSING, no solo permite la fusion de 2 o mas objetos, tambien muta los objetos originale, perdiendo el valor original del ID en este caso
+let Producto3={...Producto}
+const venta= Object.assign(Producto3,Pedido);
+console.log("consultamos el nuevo objeto venta")
+console.table(venta)
+
+
+
+// UNION DE OBJETOS USANDO SPREAD OPERADOR PARA ENVITAR LA PERDIDA DE INFORMACION CPN OBJETOS QUE COMPARTEN EL MISMO NOMBRE EN SUS PROPIEDADES
+console.log("%c11.-union de objetos usando SPREAD OPERADOR  (...)", style_console);
+// parchamos el error reiniciando el valor del producto id original
+console.table(Producto)
+console.table(Pedido)
+console.table(Comprador)
+let Venta2 =
+{
+    Producto:{...Producto},
+    Comprador:{...Comprador},
+    Pedido:{...Pedido}
+}
+console.log("Funcionamos los tres objetos en uno nuevo, sin perdida de informacion")
+console.table(Venta2)
+console.log(Venta2)
+
+// vamos a verificar el estado de mutabilidad de los datos
+console.log("vamos a verificar el estado de mutabilidad del objeto pedido")
+
+console.log(`El objeto esta de Pedido congelado? : ${Object.isFrozen(Pedido)}`);
+console.log(`El objeto esta de Pedido congelado? : ${Object.isSealed(Pedido)}`);
+
+console.log("vamos a verificar el estado de mutabilidad del objeto contador ")
+
+console.log(`El objeto esta de Pedido congelado? : ${Object.isFrozen(Comprador)}`);
+console.log(`El objeto esta de Pedido congelado? : ${Object.isSealed(Comprador)}`);
+
+console.log("vamos a verificar el estado de mutabilidad del objeto producto ")
+
+console.log(`El objeto esta de Pedido congelado? : ${Object.isFrozen(Producto)}`);
+console.log(`El objeto esta de Pedido congelado? : ${Object.isSealed(Producto)}`);
+
+// Modificamos la estructura de producto, agregando una nueva propiedad
+Producto[`isLegacy`]=true;
+console.table(Venta2)
+
+
 
 
 
