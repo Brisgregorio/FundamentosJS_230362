@@ -12,7 +12,10 @@ practicas de repaso en JavaScript puro, con el objetivo de confirmar los conocim
 |2.|Inicialización del Proyecto de Fundamentos de JS|5|Finalizada|
 |3.|Declaracion de variables(Undewfined,Boolean,Number)|10|Finalizada|
 |4.|Declaracion de variables(String,Bigint,Symbol,Null,Function)|6|Finalizada|
-|5.|Introduccion a objetos|19|Activa|
+|5.|Introduccion a objetos|19|Finalizada|
+|6.|Repaso de arreglos (Arrays)|.|.|
+
+
 ### Autor
 Brisa Nallely Garcia Gregorio
 Unidad 1
