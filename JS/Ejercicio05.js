@@ -77,7 +77,7 @@ else if(fechaActual >= inicioOtonio && fechaActual< inicioInvierno)
         console.log("Los árboles suelen cambiar de follaje")
         console.log("Se registarán temperaturas más templadas")
         console.log("Los animales comienza con la recolección de alimento y preparan sus espacios para la hibernación, incluso algunas aves migran.")
-        estacion="Verano"
+        estacion="Otoño"
         horarioVerano=true;
     }
 else 
@@ -89,4 +89,50 @@ else
        estacion="Invierno"
        horarioVerano=false;
                
-}    
+} 
+
+console.log ("%c2.- Operador Ternario(validacion?cumple:no_cumple)", style_console);
+// En java Script exista una operacion simplificada que valida si una condicion se cumpkle o no y que hacer en cada caso
+const edadPersona = 18;
+const mayoriaEdadMX =18;
+const mayoriaEdadUS = 21;
+let evaluarMayoriaEdad = (edad)=>
+    edad>=18? "Eres mayor de edad.": "No eres mayor de edad."
+console.log("Evaluando la mayoria de edad de una paersona")
+console.log(evaluarMayoriaEdad(edadPersona));
+// Sin embargo tenemos que considerar que la mayoria de edad varia en cada pais por cuestiones legales, por mo quie debemos de considerar un segundo parametyrtoen la evaluacion
+evaluarMayoriaEdad=(edad,pais)=>
+(edad>=18 && pais === "MX")?`En ${pais} eres mayor de edad`: `En ${pais} No eres mayor de edad `;
+console.log ("Evaluando la mayoria de edad de una persona en mexico...")
+console.log(evaluarMayoriaEdad(edadPersona,"MX"));
+
+console.log("Evaluando la mayoria de edad de una persona en Estados Unidos....")
+console.log(evaluarMayoriaEdad(edadPersona,"US"));
+
+console.log("%c3.-SwITCH -CASE(Eleccion por valor definido)" ,style_console);
+// Calculando tu generacion en base a tu edad
+
+let asignaGeneracion=(anioNacimiento)=>{
+    switch(true)
+{
+case(anioNacimiento<1968):
+return "Baby Boomers";
+case (anioNacimiento>1968 && anioNacimiento<=1980):
+    return "Generacion X";
+    case (anioNacimiento>1980 && anioNacimiento<=1994):
+        return "Milenials";
+    
+    case (anioNacimiento>1994 && anioNacimiento<=2010):
+        return "Centenials";
+        
+    case (anioNacimiento>2010):
+        return "Krystal";
+
+
+}
+}
+
+console.log(`Dado que nació en el año 1997 soy de la generación: ${asignaGeneracion(1982)}`);
+
+
+
