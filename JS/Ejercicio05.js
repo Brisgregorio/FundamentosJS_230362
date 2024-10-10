@@ -347,12 +347,12 @@ console.log ("------------------------------------")
 
 //Lista de series que queremos verificar
 
-let seriesDeseadas=["The Boys", "2012", "El goblin"];
+let seriesDeseadas=["Anne", "Demon Slayer", "Propuesta Laboral"];
 
 //usando map e includes para filtrar y obtener los nombres de series con 3 temporadas 
 let seriesConTresTemporadas =seriesTrending2
 
-.filter(serie=>serie.temporadas===3)//Filtramos las series que tienen 3 temporadas 
+.filter(serie=>serie.temporadas<=3)//Filtramos las series que tienen 3 temporadas 
 .map(serie=>serie.nombre)//Obtenemos solo los nombres de esas series
 
  .filter(nombre=>seriesDeseadas.includes (nombre))//Filtramos las que estan en la lista de series deseadas

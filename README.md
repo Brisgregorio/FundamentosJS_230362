@@ -13,7 +13,8 @@ practicas de repaso en JavaScript puro, con el objetivo de confirmar los conocim
 |3.|Declaracion de variables(Undewfined,Boolean,Number)|10|Finalizada|
 |4.|Declaracion de variables(String,Bigint,Symbol,Null,Function)|6|Finalizada|
 |5.|Introduccion a objetos|19|Finalizada|
-|6.|Repaso de arreglos (Arrays)|.|.|
+|6.|Repaso de arreglos (Arrays)|18|Finalizada|
+|7.|Sentencias de control y ciclos|16|Activa|
 
 
 ### Autor
