@@ -10,20 +10,11 @@ Proyecto para iniciar el desarrollo de software para web usando el framework de 
 |--|--|--|--|
 |1.|Método de Evaluación|1|Finalizada|
 |2.|Inicialización del Proyecto de Fundamentos de JS|5|Finalizada|
-<<<<<<< HEAD
-|3.|Declaracion de variables(Undewfined,Boolean,Number)|10|Finalizada|
-|4.|Declaracion de variables(String,Bigint,Symbol,Null,Function)|6|Finalizada|
-|5.|introduccion de objetos|19|Activa|
-|6.|Repaso de arreglos (Arrays)|18|Activa|
-
-=======
 |3.|Declaración de variables (Undefined, Boolean, Number)|10|Finalizada|
 |4.|Declaración de variables (String, Bigint, Symbol, Null, Function)|6|Finalizada|
 |5.|Introducción a objetos|19|Finalizada|
 |6.|Repaso de arreglos (Arrays)|18|Finalizada|
 |7.|Sentencias de control y ciclos|16|Activa|
->>>>>>> Brisa_Practica7
-
 ### Autor
 Brisa Nallely Garcia Gregorio  
 Unidad 1  
