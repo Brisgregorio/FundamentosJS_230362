@@ -14,7 +14,7 @@ Proyecto para iniciar el desarrollo de software para web usando el framework de 
 |4.|Declaración de variables (String, Bigint, Symbol, Null, Function)|6|Finalizada|
 |5.|Introducción a objetos|19|Finalizada|
 |6.|Repaso de arreglos (Arrays)|18|Finalizada|
-|7.|Sentencias de control y ciclos|16|Activa|
+|7.|Sentencias de control y ciclos|16|Finalizada|
 ### Autor
 Brisa Nallely Garcia Gregorio  
 Unidad 1  
